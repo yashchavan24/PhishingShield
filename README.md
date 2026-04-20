@@ -36,6 +36,12 @@ Every day, college students receive phishing emails like:
 
 ## 🚀 How to Run
 
+**No Python needed! Just download and double-click.**
+
+👉 [Download PhishingShield.exe](https://github.com/yashchavan24/PhishingShield/releases/latest/download/PhishingShield.exe)
+
+Default login: `admin` / `admin123`
+
 ### Requirements
 - Python 3.10+
 - Windows OS
