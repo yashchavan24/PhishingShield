@@ -1,0 +1,274 @@
+{
+  "fraud@paypal-security-login.com": {
+    "reports": 48,
+    "blocked_by": [
+      "260439851551331"
+    ],
+    "category": "Banking",
+    "first_seen": "2024-01-15"
+  },
+  "verify@sbi-security.co.in": {
+    "reports": 23,
+    "blocked_by": [],
+    "category": "Banking",
+    "first_seen": "2024-02-03"
+  },
+  "noreply@hdfc-alert-login.net": {
+    "reports": 38,
+    "blocked_by": [],
+    "category": "Banking",
+    "first_seen": "2024-01-28"
+  },
+  "support@icici-verify.com": {
+    "reports": 19,
+    "blocked_by": [],
+    "category": "Banking",
+    "first_seen": "2024-03-10"
+  },
+  "admin@svp-fee-notice.com": {
+    "reports": 31,
+    "blocked_by": [],
+    "category": "College",
+    "first_seen": "2024-02-14"
+  },
+  "secure@paytm-kyc-update.in": {
+    "reports": 29,
+    "blocked_by": [],
+    "category": "Wallet",
+    "first_seen": "2024-03-01"
+  },
+  "alert@ubi-netbanking.co": {
+    "reports": 44,
+    "blocked_by": [],
+    "category": "Banking",
+    "first_seen": "2024-01-20"
+  },
+  "helpdesk@google-account-alert.com": {
+    "reports": 17,
+    "blocked_by": [],
+    "category": "Impersonation",
+    "first_seen": "2024-03-15"
+  },
+  "no-reply@amazon-security-india.com": {
+    "reports": 52,
+    "blocked_by": [],
+    "category": "Shopping",
+    "first_seen": "2024-01-10"
+  },
+  "verify@airtel-recharge-offer.in": {
+    "reports": 15,
+    "blocked_by": [],
+    "category": "Telecom",
+    "first_seen": "2024-03-20"
+  },
+  "scholarship@edu-grant-india.com": {
+    "reports": 26,
+    "blocked_by": [],
+    "category": "College",
+    "first_seen": "2024-02-25"
+  },
+  "fees@svpcet-official.net": {
+    "reports": 33,
+    "blocked_by": [],
+    "category": "College",
+    "first_seen": "2024-02-18"
+  },
+  "prize@jio-lottery-winner.in": {
+    "reports": 61,
+    "blocked_by": [],
+    "category": "Lottery",
+    "first_seen": "2024-01-05"
+  },
+  "hr@job-offer-india-2024.com": {
+    "reports": 28,
+    "blocked_by": [],
+    "category": "Jobs",
+    "first_seen": "2024-03-08"
+  },
+  "noreply@flipkart-deal-alert.net": {
+    "reports": 22,
+    "blocked_by": [],
+    "category": "Shopping",
+    "first_seen": "2024-02-28"
+  },
+  "kyc@kotak-update-now.in": {
+    "reports": 36,
+    "blocked_by": [],
+    "category": "Banking",
+    "first_seen": "2024-01-30"
+  },
+  "verify@axis-bank-secure.co": {
+    "reports": 18,
+    "blocked_by": [],
+    "category": "Banking",
+    "first_seen": "2024-03-12"
+  },
+  "alert@phonepe-kyc-india.com": {
+    "reports": 41,
+    "blocked_by": [],
+    "category": "Wallet",
+    "first_seen": "2024-02-05"
+  },
+  "noreply@gpay-reward-claim.in": {
+    "reports": 25,
+    "blocked_by": [],
+    "category": "Wallet",
+    "first_seen": "2024-03-18"
+  },
+  "support@bsnl-offer-2024.net": {
+    "reports": 14,
+    "blocked_by": [],
+    "category": "Telecom",
+    "first_seen": "2024-03-22"
+  },
+  "admit@neet-result-2024.co.in": {
+    "reports": 39,
+    "blocked_by": [],
+    "category": "College",
+    "first_seen": "2024-02-10"
+  },
+  "help@lic-policy-update.in": {
+    "reports": 27,
+    "blocked_by": [],
+    "category": "Insurance",
+    "first_seen": "2024-02-20"
+  },
+  "verify@irctc-booking-alert.net": {
+    "reports": 21,
+    "blocked_by": [],
+    "category": "Travel",
+    "first_seen": "2024-03-05"
+  },
+  "reward@myntra-offer-win.com": {
+    "reports": 16,
+    "blocked_by": [],
+    "category": "Shopping",
+    "first_seen": "2024-03-25"
+  },
+  "noreply@ola-refund-claim.in": {
+    "reports": 13,
+    "blocked_by": [],
+    "category": "Travel",
+    "first_seen": "2024-03-28"
+  },
+  "secure@rbi-alert-india.co": {
+    "reports": 55,
+    "blocked_by": [],
+    "category": "Banking",
+    "first_seen": "2024-01-12"
+  },
+  "verify@epfo-pf-update.net": {
+    "reports": 32,
+    "blocked_by": [],
+    "category": "Government",
+    "first_seen": "2024-02-22"
+  },
+  "admin@income-tax-refund.co.in": {
+    "reports": 48,
+    "blocked_by": [],
+    "category": "Government",
+    "first_seen": "2024-01-18"
+  },
+  "claim@covid-relief-fund.in": {
+    "reports": 67,
+    "blocked_by": [],
+    "category": "Government",
+    "first_seen": "2024-01-08"
+  },
+  "noreply@swiggy-cashback-offer.com": {
+    "reports": 11,
+    "blocked_by": [],
+    "category": "Shopping",
+    "first_seen": "2024-03-30"
+  },
+  "alert@canara-bank-secure.net": {
+    "reports": 24,
+    "blocked_by": [],
+    "category": "Banking",
+    "first_seen": "2024-03-02"
+  },
+  "verify@pnb-kyc-update.in": {
+    "reports": 20,
+    "blocked_by": [],
+    "category": "Banking",
+    "first_seen": "2024-03-14"
+  },
+  "support@microsoft-india-help.com": {
+    "reports": 35,
+    "blocked_by": [],
+    "category": "Impersonation",
+    "first_seen": "2024-02-08"
+  },
+  "alert@apple-id-india.net": {
+    "reports": 30,
+    "blocked_by": [],
+    "category": "Impersonation",
+    "first_seen": "2024-02-16"
+  },
+  "prize@amazon-india-lucky.co": {
+    "reports": 58,
+    "blocked_by": [],
+    "category": "Lottery",
+    "first_seen": "2024-01-14"
+  },
+  "kyc@payzapp-update.in": {
+    "reports": 12,
+    "blocked_by": [],
+    "category": "Wallet",
+    "first_seen": "2024-04-01"
+  },
+  "noreply@union-bank-verify.net": {
+    "reports": 26,
+    "blocked_by": [],
+    "category": "Banking",
+    "first_seen": "2024-03-06"
+  },
+  "secure@bob-netbanking.co.in": {
+    "reports": 22,
+    "blocked_by": [],
+    "category": "Banking",
+    "first_seen": "2024-03-16"
+  },
+  "help@tata-sky-offer.com": {
+    "reports": 9,
+    "blocked_by": [],
+    "category": "Entertainment",
+    "first_seen": "2024-04-02"
+  },
+  "verify@voda-recharge.net": {
+    "reports": 7,
+    "blocked_by": [],
+    "category": "Telecom",
+    "first_seen": "2024-04-05"
+  },
+  "support@google.com": {
+    "reports": 0,
+    "blocked_by": [],
+    "category": "Safe",
+    "first_seen": "2024-01-01"
+  },
+  "noreply@sbi.co.in": {
+    "reports": 0,
+    "blocked_by": [],
+    "category": "Safe",
+    "first_seen": "2024-01-01"
+  },
+  "alerts@hdfcbank.com": {
+    "reports": 0,
+    "blocked_by": [],
+    "category": "Safe",
+    "first_seen": "2024-01-01"
+  },
+  "noreply@icicibank.com": {
+    "reports": 0,
+    "blocked_by": [],
+    "category": "Safe",
+    "first_seen": "2024-01-01"
+  },
+  "info@svpcet.ac.in": {
+    "reports": 0,
+    "blocked_by": [],
+    "category": "Safe",
+    "first_seen": "2024-01-01"
+  }
+}

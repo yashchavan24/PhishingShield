@@ -1,0 +1,4 @@
+pyperclip
+pillow
+requests
+pyinstaller
