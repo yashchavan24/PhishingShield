@@ -1,5 +1,9 @@
 # 🛡️ Phishing Shield
-**🔗 Live Project:** https://github.com/yashchavan24/PhishingShield
+**🔗 GitHub:** https://github.com/yashchavan24/PhishingShield
+
+**⬇️ Download & Run (No Python needed!):** https://github.com/yashchavan24/PhishingShield/releases/latest/download/PhishingShield.exe
+
+> Login with: `admin` / `admin123`
 > Community-Powered Email Protection for Students
 
 Phishing Shield is like **Truecaller for emails**. Copy any suspicious email address and get an instant verdict — SAFE, SUSPICIOUS, or PHISHING — powered by community reports.
