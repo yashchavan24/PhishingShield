@@ -1,4 +1,1 @@
 pyperclip
-pillow
-requests
-pyinstaller

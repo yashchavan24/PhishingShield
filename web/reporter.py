@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 if getattr(sys, "frozen", False):          # running as a PyInstaller .exe
     BASE_DIR = os.path.dirname(sys.executable)
 
-DEVICE_LOG = os.path.join(BASE_DIR, "device_log.json")
+DEVICE_LOG = os.path.join("/tmp" if os.environ.get("VERCEL") else BASE_DIR, "device_log.json")
 
 BLOCK_CAP = 1000           # max stored blocked_by IDs per email
 DEVICE_LOG_CAP = 5000      # keep the rate-limit file from growing forever

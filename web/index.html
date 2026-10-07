@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Phishing Shield — community-powered email threat detection" />
+  <title>Phishing Shield — Check any email before you trust it</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-brand"><span class="shield">🛡</span> PHISHING <span class="accent">SHIELD</span></div>
+    <div class="nav-links">
+      <a href="#scanner">Scanner</a>
+      <a href="#database">Threat DB</a>
+      <a href="#stats">Stats</a>
+      <a href="#api">API</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-badge">⬤  COMMUNITY-POWERED PROTECTION</div>
+    <h1>Like <span class="grad">Truecaller</span>, but for <span class="grad">emails</span>.</h1>
+    <p class="hero-sub">
+      Paste any suspicious email address. Phishing Shield checks it against the
+      community threat database <b>plus a heuristic engine</b> and gives you a
+      verdict in milliseconds — PHISHING, SUSPICIOUS or SAFE.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#scanner">🔍 Try the scanner</a>
+      <a class="btn btn-ghost" href="#api">Read the API docs</a>
+    </div>
+    <div class="hero-stats" id="hero-stats">
+      <div><b id="hs-entries">65</b><span>threats in DB</span></div>
+      <div><b id="hs-reports">—</b><span>community reports</span></div>
+      <div><b id="hs-confirmed">—</b><span>confirmed phishing</span></div>
+      <div><b>&lt;50ms</b><span>avg verdict</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="scanner" class="section">
+      <h2>✉️ Email Scanner</h2>
+      <p class="section-sub">Enter any email address — unknown, suspicious, or real.</p>
+      <div class="scan-card">
+        <input id="scan-input" type="email" spellcheck="false" autocapitalize="off"
+               placeholder="e.g. verify@sbi-security.co.in" />
+        <button id="scan-btn" class="btn btn-primary">SCAN →</button>
+      </div>
+      <div id="scan-result" class="result hidden"></div>
+
+      <div class="try-these">
+        <span>Try:</span>
+        <button data-email="fraud@paypal-security-login.com" class="chip chip-red">phishing</button>
+        <button data-email="verify@netbanking-sbi-alert.top" class="chip chip-yel">heuristic catch</button>
+        <button data-email="signup@newsite.xyz" class="chip chip-yel">suspicious TLD</button>
+        <button data-email="info@svpcet.ac.in" class="chip chip-grn">safe/whitelist</button>
+      </div>
+    </section>
+
+    <section id="database" class="section">
+      <h2>📋 Threat Database</h2>
+      <p class="section-sub">Live view of the community-maintained threat DB.</p>
+      <div class="db-toolbar">
+        <input id="db-search" placeholder="🔍  search email / category…" />
+        <select id="db-filter">
+          <option value="ALL">All</option>
+          <option value="PHISHING">Phishing only</option>
+          <option value="SUSPICIOUS">Suspicious only</option>
+          <option value="SAFE">Safe only</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table id="db-table">
+          <thead><tr><th>Email</th><th>Status</th><th>Reports</th><th>Category</th><th>First Seen</th></tr></thead>
+          <tbody id="db-body"><tr><td colspan="5" class="loading">loading…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="stats" class="section">
+      <h2>📈 Statistics</h2>
+      <div class="stats-grid" id="stats-grid"></div>
+      <div class="cat-grid" id="cat-grid"></div>
+    </section>
+
+    <section id="api" class="section">
+      <h2>🔌 REST API</h2>
+      <p class="section-sub">The full backend is exposed as a JSON API — call it from any language.</p>
+      <div class="api-grid">
+        <div class="api-card">
+          <div class="meth meth-post">POST</div><code>/api/check</code>
+          <p>Verdict for an email. <code>{"email": "..."}</code></p>
+        </div>
+        <div class="api-card">
+          <div class="meth meth-post">POST</div><code>/api/report</code>
+          <p>Add a community report (rate-limited 1/day/device).</p>
+        </div>
+        <div class="api-card">
+          <div class="meth meth-get">GET</div><code>/api/stats</code>
+          <p>Database statistics.</p>
+        </div>
+        <div class="api-card">
+          <div class="meth meth-get">GET</div><code>/api/threats?q=&filter=</code>
+          <p>Search / filter the threat DB.</p>
+        </div>
+      </div>
+      <pre class="code-sample">curl -s -X POST https://YOUR-DEPLOY-URL/api/check \
+  -H "Content-Type: application/json" \
+  -d '{"email":"verify@paypa1-security.com"}'</pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>Phishing Shield · Desktop (Python/Tkinter) + Web (HTML/JS/Python serverless)</p>
+    <p>6th Semester Major Project · Dept of CSE (Cyber Security) · SVPCET Nagpur · 2026</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

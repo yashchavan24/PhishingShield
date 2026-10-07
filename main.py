@@ -81,7 +81,10 @@ class LoginWindow:
     def _build(self):
         self.root.title("Phishing Shield")
         self.root.configure(bg=BG)
-        self.root.state("zoomed")
+        try:
+            self.root.state("zoomed")   # some Linux WMs refuse "zoomed"
+        except tk.TclError:
+            pass
 
         left = tk.Frame(self.root, bg=BG2, width=480)
         left.pack(side="left", fill="y")
@@ -247,6 +250,7 @@ class PhishingShieldApp:
         self.username = username
         self.monitor = ClipboardMonitor(self.on_email_detected)
         self.is_monitoring = False
+        self.root.after(250, self._pump_monitor)
         self.scan_count = 0
         self.blocked_count = 0
         self.root.title("Phishing Shield — Dashboard")
@@ -382,6 +386,7 @@ class PhishingShieldApp:
     def _clear_main(self):
         for w in self.main_area.winfo_children():
             w.destroy()
+        self.stat_labels = {}          # stale refs would raise TclError later
 
     def _scrollable(self):
         cv = tk.Canvas(self.main_area, bg=BG, bd=0, highlightthickness=0)
@@ -532,7 +537,7 @@ class PhishingShieldApp:
         tk.Entry(sf, textvariable=self.search_var, font=F_MONO_S,
                  fg=TXT1, bg=BG3, insertbackground=CYAN,
                  relief="flat", bd=0, width=28).pack(side="left", ipady=8, padx=(0, 10))
-        self.search_var.trace("w", lambda *a: self._refresh_db_table())
+        self.search_var.trace_add("write", lambda *a: self._refresh_db_table())
 
         self.filter_var = tk.StringVar(value="All")
         for label, col in [("All",TXT1),("Phishing",RED),("Suspicious",YELLOW),("Safe",GREEN)]:
@@ -793,8 +798,11 @@ class PhishingShieldApp:
     def _update_stats(self):
         if not hasattr(self, "stat_labels"):
             return
-        self.stat_labels.get("Session Scans",  tk.Label()).config(text=str(self.scan_count))
-        self.stat_labels.get("Session Blocks", tk.Label()).config(text=str(self.blocked_count))
+        for key, value in (("Session Scans", self.scan_count),
+                           ("Session Blocks", self.blocked_count)):
+            lbl = self.stat_labels.get(key)
+            if lbl is not None and lbl.winfo_exists():
+                lbl.config(text=str(value))
 
     def toggle_monitoring(self):
         if not self.is_monitoring:
@@ -811,7 +819,18 @@ class PhishingShieldApp:
             self._log("Monitoring stopped.", "info")
 
     def on_email_detected(self, result):
-        self.root.after(0, self._handle_result, result)
+        try:
+            self.root.after(0, self._handle_result, result)
+        except tk.TclError:
+            pass
+
+    def _pump_monitor(self):
+        """Drain the clipboard thread's queue on the GUI thread (thread-safe)."""
+        try:
+            self.monitor.pump()
+        except Exception:
+            pass
+        self.root.after(250, self._pump_monitor)
 
     def _handle_result(self, result):
         self.scan_count += 1
