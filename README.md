@@ -5,7 +5,7 @@
 > Like **Truecaller, but for emails.** Copy or paste any suspicious email address and get an instant verdict - SAFE, SUSPICIOUS, or PHISHING - powered by community reports **and** a heuristic detection engine.
 
 **GitHub:** https://github.com/yashchavan24/PhishingShield
-**Live Web App:** https://phishing-shield-three.vercel.app  (deployed from `web/`)
+**Live Web App:** https://phishing-shield-navy.vercel.app  (deployed from `web/`)
 **Desktop exe (no Python needed):** https://github.com/yashchavan24/PhishingShield/releases/latest/download/PhishingShield.exe
 
 > Login: admin / admin123
@@ -71,7 +71,7 @@ Spam filters miss sophisticated phishing, and students have no quick way to veri
 ## How to Run
 
 ### Web app (Vercel)
-Live at https://phishing-shield-three.vercel.app - no setup needed.
+Live at https://phishing-shield-navy.vercel.app - no setup needed.
 
 Run it locally instead:
 
@@ -168,7 +168,7 @@ Example: verify@netbanking-sbi-alert.top has 0 reports but is still flagged PHIS
 | GET | /api/threats | ?q=&filter= | searchable threat list |
 | GET | /api/health | - | health probe |
 
-    curl -X POST https://phishing-shield-three.vercel.app/api/check -H "Content-Type: application/json" -d '{"email":"verify@paypa1-security.com"}'
+    curl -X POST https://phishing-shield-navy.vercel.app/api/check -H "Content-Type: application/json" -d '{"email":"verify@paypa1-security.com"}'
 
 ---
 
